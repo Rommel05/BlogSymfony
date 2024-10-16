@@ -8,6 +8,16 @@
                 <h1>Images</h1>
                 {{ form(form, {'attr': {'class':'form-horizontal'}}) }}
                 <hr class="divider">
+
+                <h2>Uploaded Images</h2>
+                <ul>
+                    {% for image in images %}
+                        <li>
+                            <img src="{{ asset('images/index/gallery/' ~ image.file) }}" alt="{{ image.file }}">
+                        </li>
+                    {% endfor %}
+
+                </ul>
             </div>
         </div>
     </div>
